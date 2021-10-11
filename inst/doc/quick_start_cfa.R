@@ -86,15 +86,15 @@ plot(p2)
 #  plot(p2)
 
 ## ----echo = FALSE-------------------------------------------------------------
-if ((compareVersion(as.character(getRversion()), "4.1.0")) >= 0) {
-    p2 <- set_cfa_layout(p, indicator_order, indicator_factor, fcov_curve = 1.75,
-                        loading_position = .9, point_to = "up") |>
-                        mark_sig(fit)
-  } else {
+# if ((compareVersion(as.character(getRversion()), "4.1.0")) >= 0) {
+#     p2 <- set_cfa_layout(p, indicator_order, indicator_factor, fcov_curve = 1.75,
+#                         loading_position = .9, point_to = "up") |>
+#                         mark_sig(fit)
+#   } else {
     require(magrittr)
     p2 <- set_cfa_layout(p, indicator_order, indicator_factor, fcov_curve = 1.75,
                         loading_position = .9, point_to = "up") %>%
                         mark_sig(fit)
-  }
+  # }
 plot(p2)
 
