@@ -12,7 +12,7 @@ library(semptools)
 
 ## -----------------------------------------------------------------------------
 library(lavaan)
-mod <- 
+mod <-
   'x3 ~  x1 + x2 + cov1 + cov2 + cov3
    x4 ~  x1 + x3 + cov1 + cov2 + cov3
   '
@@ -31,7 +31,7 @@ m <- layout_matrix(x1 = c(1, 1),
 p_pa <- semPaths(fit, whatLabels = "est",
            sizeMan = 10,
            edge.label.cex = .5,
-           style = "ram", 
+           style = "ram",
            nCharNodes = 0, nCharEdges = 0,
            layout = m)
 

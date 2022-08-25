@@ -12,7 +12,7 @@ library(semptools)
 head(round(sem_example, 3), 3)
 
 ## -----------------------------------------------------------------------------
-mod <- 
+mod <-
   'f1 =~ x01 + x02 + x03
    f2 =~ x04 + x05 + x06 + x07
    f3 =~ x08 + x09 + x10
@@ -35,15 +35,15 @@ p <- semPaths(fit, whatLabels="est",
         mar = c(5, 5, 5, 5))
 
 ## -----------------------------------------------------------------------------
-indicator_order  <- c("x04", "x05", "x06", "x07", 
-                      "x01", "x02", "x03", 
+indicator_order  <- c("x04", "x05", "x06", "x07",
+                      "x01", "x02", "x03",
                       "x11", "x12", "x13", "x14",
                       "x08", "x09", "x10")
 
 ## -----------------------------------------------------------------------------
-indicator_factor <- c( "f2",  "f2",  "f2",  "f2",  
-                       "f1",  "f1",  "f1",  
-                       "f4",  "f4",  "f4",  "f4",  
+indicator_factor <- c( "f2",  "f2",  "f2",  "f2",
+                       "f1",  "f1",  "f1",
+                       "f4",  "f4",  "f4",  "f4",
                        "f3",  "f3",  "f3")
 
 ## -----------------------------------------------------------------------------
@@ -71,7 +71,7 @@ factor_point_to <- layout_matrix(left = c(1, 1),
 factor_point_to
 
 ## -----------------------------------------------------------------------------
-p2 <- set_sem_layout(p, 
+p2 <- set_sem_layout(p,
                      indicator_order = indicator_order,
                      indicator_factor = indicator_factor,
                      factor_layout = factor_layout,
@@ -85,7 +85,7 @@ indicator_push <- c(f3 = 2,
                     f2 = 1.5)
 
 ## -----------------------------------------------------------------------------
-p2 <- set_sem_layout(p, 
+p2 <- set_sem_layout(p,
                      indicator_order = indicator_order,
                      indicator_factor = indicator_factor,
                      factor_layout = factor_layout,
@@ -99,7 +99,7 @@ indicator_spread <- c(f1 = 2,
                       f4 = 1.5)
 
 ## -----------------------------------------------------------------------------
-p2 <- set_sem_layout(p, 
+p2 <- set_sem_layout(p,
                      indicator_order = indicator_order,
                      indicator_factor = indicator_factor,
                      factor_layout = factor_layout,
@@ -114,7 +114,7 @@ loading_position <- c(f2 = .7,
                       f4 = .8)
 
 ## -----------------------------------------------------------------------------
-p2 <- set_sem_layout(p, 
+p2 <- set_sem_layout(p,
                      indicator_order = indicator_order,
                      indicator_factor = indicator_factor,
                      factor_layout = factor_layout,
@@ -141,7 +141,7 @@ plot(p2)
 
 ## ----echo = FALSE-------------------------------------------------------------
 # if ((compareVersion(as.character(getRversion()), "4.1.0")) >= 0) {
-#     p2 <- set_sem_layout(p, 
+#     p2 <- set_sem_layout(p,
 #                         indicator_order = indicator_order,
 #                         indicator_factor = indicator_factor,
 #                         factor_layout = factor_layout,
@@ -154,7 +154,7 @@ plot(p2)
 #                     mark_sig(fit)
 #   } else {
     require(magrittr)
-    p2 <- set_sem_layout(p, 
+    p2 <- set_sem_layout(p,
                         indicator_order = indicator_order,
                         indicator_factor = indicator_factor,
                         factor_layout = factor_layout,
@@ -164,7 +164,7 @@ plot(p2)
                         loading_position = loading_position) %>%
                         set_curve(c("f2 ~~ f1" = -1,
                                     "f4 ~ f1" = 1.5)) %>%
-                        mark_sig(fit)    
+                        mark_sig(fit)
   # }
 plot(p2)
 

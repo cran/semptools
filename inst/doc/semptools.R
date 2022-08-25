@@ -12,7 +12,7 @@ library(semptools)
 
 ## ----mark_sig01---------------------------------------------------------------
 library(lavaan)
-mod_pa <- 
+mod_pa <-
  'x1 ~~ x2
   x3 ~  x1 + x2
   x4 ~  x1 + x3
@@ -28,7 +28,7 @@ m <- matrix(c("x1",   NA,  NA,   NA,
 p_pa <- semPaths(fit_pa, whatLabels = "est",
            sizeMan = 10,
            edge.label.cex = 1.15,
-           style = "ram", 
+           style = "ram",
            nCharNodes = 0, nCharEdges = 0,
            layout = m)
 
@@ -43,7 +43,7 @@ plot(p_pa3)
 
 ## -----------------------------------------------------------------------------
 library(lavaan)
-mod_pa <- 
+mod_pa <-
   'x1 ~~ x2
    x3 ~  x1 + x2
    x4 ~  x1 + x3
@@ -59,7 +59,7 @@ m <- matrix(c("x1",   NA,  NA,   NA,
 p_pa <- semPaths(fit_pa, whatLabels = "est",
            sizeMan = 10,
            edge.label.cex = 1.15,
-           style = "ram", 
+           style = "ram",
            nCharNodes = 0, nCharEdges = 0,
            layout = m)
 
@@ -74,7 +74,7 @@ plot(p_pa2)
 
 ## -----------------------------------------------------------------------------
 library(lavaan)
-mod_pa <- 
+mod_pa <-
  'x1 ~~ x2
   x3 ~  x1 + x2
   x4 ~  x1 + x3
@@ -89,7 +89,7 @@ m <- matrix(c("x1",   NA,  NA,   NA,
 p_pa <- semPaths(fit_pa, whatLabels = "est",
            sizeMan = 10,
            edge.label.cex = 1.15,
-           style = "ram", 
+           style = "ram",
            nCharNodes = 0, nCharEdges = 0,
            layout = m)
 
@@ -103,7 +103,7 @@ plot(p_pa3)
 
 ## -----------------------------------------------------------------------------
 library(lavaan)
-mod_pa <- 
+mod_pa <-
  'x1 ~~ x2
   x3 ~  x1 + x2
   x4 ~  x1 + x3
@@ -118,7 +118,7 @@ m <- matrix(c("x1",   NA,  NA,   NA,
 p_pa <- semPaths(fit_pa, whatLabels = "est",
            sizeMan = 10,
            edge.label.cex = 1.15,
-           style = "ram", 
+           style = "ram",
            nCharNodes = 0, nCharEdges = 0,
            layout = m)
 
@@ -130,7 +130,7 @@ plot(p_pa3)
 
 ## -----------------------------------------------------------------------------
 library(lavaan)
-mod_pa <- 
+mod_pa <-
  'x1 ~~ x2
   x3 ~  x1 + x2
   x4 ~  x1 + x3
@@ -145,7 +145,7 @@ m <- matrix(c("x1",   NA,  NA,   NA,
 p_pa <- semPaths(fit_pa, whatLabels = "est",
            sizeMan = 10,
            edge.label.cex = 1.15,
-           style = "ram", 
+           style = "ram",
            nCharNodes = 0, nCharEdges = 0,
            layout = m)
 
@@ -161,7 +161,7 @@ plot(p_pa3)
 library(lavaan)
 library(semPlot)
 library(semptools)
-mod_pa <- 
+mod_pa <-
  'x1 ~~ x2
   x3 ~  x1 + x2
   x4 ~  x1 + x3
@@ -173,7 +173,7 @@ m <- matrix(c("x1",   NA,  NA,   NA,
 p_pa <- semPaths(fit_pa, whatLabels = "est",
            sizeMan = 10,
            edge.label.cex = 1.15,
-           style = "ram", 
+           style = "ram",
            nCharNodes = 0, nCharEdges = 0,
            layout = m)
 p_pa2 <- mark_sig(p_pa, fit_pa, alpha = c("(n.s.)" = 1.00, "*" = .01))
@@ -190,7 +190,7 @@ plot(p_pa3)
 
 ## -----------------------------------------------------------------------------
 library(lavaan)
-mod_pa <- 
+mod_pa <-
  'x1 ~~ x2
   x3 ~  x1 + x2
   x4 ~  x1 + x3
@@ -205,7 +205,7 @@ m <- matrix(c("x1",   NA,  NA,   NA,
 p_pa <- semPaths(fit_pa, whatLabels = "est",
            sizeMan = 10,
            edge.label.cex = 1.15,
-           style = "ram", 
+           style = "ram",
            nCharNodes = 0, nCharEdges = 0,
            layout = m)
 

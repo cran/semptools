@@ -12,7 +12,7 @@
 
 <meta name="author" content="Shu Fai Cheung &amp; Mark Hok Chio Lai" />
 
-<meta name="date" content="2021-10-06" />
+<meta name="date" content="2022-08-25" />
 
 <title>Quick Start To set_cfa_layout</title>
 
@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   ul.task-list{list-style: none;}
     </style>
+
 
 
 <style type="text/css">
@@ -348,7 +349,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 <h1 class="title toc-ignore">Quick Start To set_cfa_layout</h1>
 <h4 class="author">Shu Fai Cheung &amp; Mark Hok Chio Lai</h4>
-<h4 class="date">2021-10-06</h4>
+<h4 class="date">2022-08-25</h4>
 
 
 
@@ -370,7 +371,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <span id="cb1-9"><a href="#cb1-9"></a><span class="co">#&gt; 2 0.110 -0.207 -0.226</span></span>
 <span id="cb1-10"><a href="#cb1-10"></a><span class="co">#&gt; 3 1.604 -1.688  0.395</span></span></code></pre></div>
 <p>This is the CFA model to be fitted:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>mod &lt;-<span class="st"> </span></span>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>mod &lt;-</span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="st">  &#39;f1 =~ x01 + x02 + x03</span></span>
 <span id="cb2-3"><a href="#cb2-3"></a><span class="st">   f2 =~ x04 + x05 + x06 + x07</span></span>
 <span id="cb2-4"><a href="#cb2-4"></a><span class="st">   f3 =~ x08 + x09 + x10</span></span>
@@ -421,16 +422,16 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <ul>
 <li><code>indicator_order</code> is a string vector with length equal to the number of indicators, with the desired order. In this example, it will be like this:</li>
 </ul>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>indicator_order  &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;x04&quot;</span>, <span class="st">&quot;x05&quot;</span>, <span class="st">&quot;x06&quot;</span>, <span class="st">&quot;x07&quot;</span>, </span>
-<span id="cb5-2"><a href="#cb5-2"></a>                      <span class="st">&quot;x01&quot;</span>, <span class="st">&quot;x02&quot;</span>, <span class="st">&quot;x03&quot;</span>, </span>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>indicator_order  &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;x04&quot;</span>, <span class="st">&quot;x05&quot;</span>, <span class="st">&quot;x06&quot;</span>, <span class="st">&quot;x07&quot;</span>,</span>
+<span id="cb5-2"><a href="#cb5-2"></a>                      <span class="st">&quot;x01&quot;</span>, <span class="st">&quot;x02&quot;</span>, <span class="st">&quot;x03&quot;</span>,</span>
 <span id="cb5-3"><a href="#cb5-3"></a>                      <span class="st">&quot;x11&quot;</span>, <span class="st">&quot;x12&quot;</span>, <span class="st">&quot;x13&quot;</span>, <span class="st">&quot;x14&quot;</span>,</span>
 <span id="cb5-4"><a href="#cb5-4"></a>                      <span class="st">&quot;x08&quot;</span>, <span class="st">&quot;x09&quot;</span>, <span class="st">&quot;x10&quot;</span>)</span></code></pre></div>
 <ul>
 <li><code>indicator_factor</code> is a string vector with length equal to the number of indicators. The elements are the names of the latent factors, denoting which indicators will be used to compute the mean positions to place the latent factors:</li>
 </ul>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>indicator_factor &lt;-<span class="st"> </span><span class="kw">c</span>( <span class="st">&quot;f2&quot;</span>,  <span class="st">&quot;f2&quot;</span>,  <span class="st">&quot;f2&quot;</span>,  <span class="st">&quot;f2&quot;</span>,  </span>
-<span id="cb6-2"><a href="#cb6-2"></a>                       <span class="st">&quot;f1&quot;</span>,  <span class="st">&quot;f1&quot;</span>,  <span class="st">&quot;f1&quot;</span>,  </span>
-<span id="cb6-3"><a href="#cb6-3"></a>                       <span class="st">&quot;f4&quot;</span>,  <span class="st">&quot;f4&quot;</span>,  <span class="st">&quot;f4&quot;</span>,  <span class="st">&quot;f4&quot;</span>,  </span>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>indicator_factor &lt;-<span class="st"> </span><span class="kw">c</span>( <span class="st">&quot;f2&quot;</span>,  <span class="st">&quot;f2&quot;</span>,  <span class="st">&quot;f2&quot;</span>,  <span class="st">&quot;f2&quot;</span>,</span>
+<span id="cb6-2"><a href="#cb6-2"></a>                       <span class="st">&quot;f1&quot;</span>,  <span class="st">&quot;f1&quot;</span>,  <span class="st">&quot;f1&quot;</span>,</span>
+<span id="cb6-3"><a href="#cb6-3"></a>                       <span class="st">&quot;f4&quot;</span>,  <span class="st">&quot;f4&quot;</span>,  <span class="st">&quot;f4&quot;</span>,  <span class="st">&quot;f4&quot;</span>,</span>
 <span id="cb6-4"><a href="#cb6-4"></a>                       <span class="st">&quot;f3&quot;</span>,  <span class="st">&quot;f3&quot;</span>,  <span class="st">&quot;f3&quot;</span>)</span></code></pre></div>
 <p>The <code>set_cfa_layout()</code> function needs at least three arguments:</p>
 <ul>
@@ -449,7 +450,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <div id="change-the-curvatures-of-the-factor-covariances" class="section level1">
 <h1>Change the Curvatures of the Factor Covariances</h1>
 <p>The graph has the factors and indicators ordered as required. However, the inter-factor covariances are too close to the factors. To increases the curvatures of the covariances, we can use the argument <code>fcov_curve</code>. The default is .4. Let us increase it to 1.75.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>p2 &lt;-<span class="st"> </span><span class="kw">set_cfa_layout</span>(p, </span>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>p2 &lt;-<span class="st"> </span><span class="kw">set_cfa_layout</span>(p,</span>
 <span id="cb8-2"><a href="#cb8-2"></a>                     indicator_order,</span>
 <span id="cb8-3"><a href="#cb8-3"></a>                     indicator_factor,</span>
 <span id="cb8-4"><a href="#cb8-4"></a>                     <span class="dt">fcov_curve =</span> <span class="fl">1.75</span>)</span>

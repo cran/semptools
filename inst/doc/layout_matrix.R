@@ -13,7 +13,7 @@ library(semptools)
 ## ----conceptual_diagram, echo = FALSE-----------------------------------------
 suppressMessages(library(lavaan))
 suppressMessages(library(semPlot))
-mod_pa <- 
+mod_pa <-
  'x1 ~~ x2
   x3 ~  x1 + x2
   x4 ~  x1 + x3
@@ -36,7 +36,7 @@ plot(p_pa2con)
 ## ----wo_layout----------------------------------------------------------------
 library(lavaan)
 library(semPlot)
-mod_pa <- 
+mod_pa <-
  'x1 ~~ x2
   x3 ~  x1 + x2
   x4 ~  x1 + x3
@@ -45,7 +45,7 @@ fit_pa <- lavaan::sem(mod_pa, pa_example)
 p_pa <- semPaths(fit_pa, whatLabels = "est",
            sizeMan = 10,
            edge.label.cex = 1.15,
-           style = "ram", 
+           style = "ram",
            nCharNodes = 0, nCharEdges = 0)
 
 ## ----grid, echo = FALSE-------------------------------------------------------
@@ -83,7 +83,7 @@ m
 p_pa <- semPaths(fit_pa, whatLabels = "est",
            sizeMan = 10,
            edge.label.cex = 1.15,
-           style = "ram", 
+           style = "ram",
            nCharNodes = 0, nCharEdges = 0,
            layout = m)
 
@@ -102,7 +102,7 @@ m2
 p_pa <- semPaths(fit_pa, whatLabels = "est",
            sizeMan = 10,
            edge.label.cex = 1.15,
-           style = "ram", 
+           style = "ram",
            nCharNodes = 0, nCharEdges = 0,
            layout = m2)
 
@@ -115,12 +115,12 @@ m3
 p_pa <- semPaths(fit_pa, whatLabels = "est",
            sizeMan = 10,
            edge.label.cex = 1.15,
-           style = "ram", 
+           style = "ram",
            nCharNodes = 0, nCharEdges = 0,
            layout = m3)
 
 ## -----------------------------------------------------------------------------
-mod <- 
+mod <-
   'f1 =~ x01 + x02 + x03
    f2 =~ x04 + x05 + x06 + x07
    f3 =~ x08 + x09 + x10
@@ -188,13 +188,13 @@ point_to <- layout_matrix(left = c(1, 1),
                           up = c(2, 3))
 
 ## -----------------------------------------------------------------------------
-indicator_order  <- c("x04", "x05", "x06", "x07", 
-                      "x01", "x02", "x03", 
+indicator_order  <- c("x04", "x05", "x06", "x07",
+                      "x01", "x02", "x03",
                       "x11", "x12", "x13", "x14",
                       "x08", "x09", "x10")
-indicator_factor <- c( "f2",  "f2",  "f2",  "f2",  
-                       "f1",  "f1",  "f1",  
-                       "f4",  "f4",  "f4",  "f4",  
+indicator_factor <- c( "f2",  "f2",  "f2",  "f2",
+                       "f1",  "f1",  "f1",
+                       "f4",  "f4",  "f4",  "f4",
                        "f3",  "f3",  "f3")
 indicator_push <- c(f3 = 2.5,
                     f4 = 2.5,
@@ -207,7 +207,7 @@ indicator_spread <- c(f1 = 2,
 loading_position <- c(f2 = .6,
                       f3 = .8,
                       f4 = .8)
-p2 <- set_sem_layout(p, 
+p2 <- set_sem_layout(p,
                      indicator_order = indicator_order,
                      indicator_factor = indicator_factor,
                      factor_layout = m_sem,
