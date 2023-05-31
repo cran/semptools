@@ -1,3 +1,24 @@
+# semptools 0.2.9.11
+
+- Used the native functions of `semPlot` (`semPlot::man()` and `semPlot::lat()`)
+  to check nodes in `drop_nodes()` and `keep_nodes()`. As a consequence,
+  the `semPlot` package is now in the Import section. (More native functions
+  will be used in the future to ensure compatibility.) (0.2.9.11)
+
+
+# semptools 0.2.9.10
+
+- Updated pkgdown site.
+
+# semptools 0.2.9.9
+
+- Added support for 2nd order factor (see `vignette("second_order")`). (0.2.9.7)
+- Fixed doc due to Roxygen updated to 7.2.1. (0.2.9.7)
+- Update the GitHub actions. (0.2.9.8)
+- Fixed doc due to Roxygen updated to 7.2.3. (0.2.9.9)
+- Fixed `set_curve()`. It should now work for bidirectional
+  edges regardless of the order of the nodes in the specification. (0.2.9.9)
+
 # semptools 0.2.9.6
 
 - Fixed several problems with `pkgdown` setting.

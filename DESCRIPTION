@@ -1,6 +1,6 @@
 Package: semptools
 Title: Customizing Structural Equation Modelling Plots
-Version: 0.2.9.6
+Version: 0.2.9.11
 Authors@R: c(
     person(given = "Shu Fai",
            family = "Cheung",
@@ -23,14 +23,14 @@ Depends: R (>= 3.6.0)
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Imports: dplyr, lavaan, rlang
-Suggests: semPlot, testthat (>= 2.1.0), knitr, rmarkdown, magrittr
-RoxygenNote: 7.2.0
+Imports: dplyr, lavaan, rlang, semPlot
+Suggests: testthat (>= 2.1.0), knitr, rmarkdown, magrittr
+RoxygenNote: 7.2.3
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2022-08-25 15:04:24 UTC; sfcheung
+Packaged: 2023-05-29 14:59:24 UTC; sfcheung
 Author: Shu Fai Cheung [aut, cre] (<https://orcid.org/0000-0002-9871-9448>),
   Mark Hok Chio Lai [aut] (<https://orcid.org/0000-0002-9196-7406>)
 Maintainer: Shu Fai Cheung <shufai.cheung@gmail.com>
 Repository: CRAN
-Date/Publication: 2022-08-25 15:20:02 UTC
+Date/Publication: 2023-05-31 11:00:06 UTC
