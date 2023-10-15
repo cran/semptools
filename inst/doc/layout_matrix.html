@@ -12,7 +12,7 @@
 
 <meta name="author" content="Shu Fai Cheung &amp; Mark Hok Chio Lai" />
 
-<meta name="date" content="2023-05-29" />
+<meta name="date" content="2023-10-15" />
 
 <title>Layout Matrices</title>
 
@@ -340,22 +340,24 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 <h1 class="title toc-ignore">Layout Matrices</h1>
 <h4 class="author">Shu Fai Cheung &amp; Mark Hok Chio Lai</h4>
-<h4 class="date">2023-05-29</h4>
+<h4 class="date">2023-10-15</h4>
 
 
 
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
-<p>One useful feature of <code>semPlot::semPaths()</code> is using
-setting the argument <code>layout</code> to a layout matrix to specify
-the location of each node in a structural equation model. This guide
-briefly explains how to use <code>layout</code>, and then introduces the
-helper function <code>layout_matrix()</code> of <code>semptools</code>
-that can be used to construct a layout matrix. Last, it describes how
-<code>factor_layout</code> is used in <code>set_sem_layout()</code> to
-specify the layout of the latent factors only, and let
-<code>set_sem_layout()</code> decide the positions of their
-indicators.</p>
+<p>One useful feature of <code>semPlot::semPaths()</code> from the
+package <a href="https://sfcheung.github.io/semptools/">semptools</a>
+(<a href="https://cran.r-project.org/package=semptools">CRAN page</a>)
+is using setting the argument <code>layout</code> to a layout matrix to
+specify the location of each node in a structural equation model. This
+guide briefly explains how to use <code>layout</code>, and then
+introduces the helper function <code>layout_matrix()</code> of
+<code>semptools</code> that can be used to construct a layout matrix.
+Last, it describes how <code>factor_layout</code> is used in
+<code>set_sem_layout()</code> to specify the layout of the latent
+factors only, and let <code>set_sem_layout()</code> decide the positions
+of their indicators.</p>
 </div>
 <div id="what-layout-does-in-semplotsempaths." class="section level1">
 <h1>What <code>layout</code> Does in

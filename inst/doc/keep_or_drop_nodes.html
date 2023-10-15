@@ -12,7 +12,7 @@
 
 <meta name="author" content="Shu Fai Cheung &amp; Mark Hok Chio Lai" />
 
-<meta name="date" content="2023-05-29" />
+<meta name="date" content="2023-10-15" />
 
 <title>Keep or Drop Selected Variables</title>
 
@@ -340,7 +340,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 <h1 class="title toc-ignore">Keep or Drop Selected Variables</h1>
 <h4 class="author">Shu Fai Cheung &amp; Mark Hok Chio Lai</h4>
-<h4 class="date">2023-05-29</h4>
+<h4 class="date">2023-10-15</h4>
 
 
 
@@ -353,8 +353,9 @@ them as long as results regarding these control variables are reported
 in other forms (e.g., a table of all parameter estimates), and keep only
 the main variables in the plot.</p>
 <p>Two helper functions, <code>drop_nodes</code> and
-<code>keep_nodes</code>, were developed for this purpose. When an SEM
-output object, such as the output from <code>lavaan</code>, is passed to
+<code>keep_nodes</code>, from the package <a href="https://sfcheung.github.io/semptools/">semptools</a> (<a href="https://cran.r-project.org/package=semptools">CRAN page</a>), were
+developed for this purpose. When an SEM output object, such as the
+output from <code>lavaan</code>, is passed to
 <code>semPlot::semPaths</code>, it is first processed by
 <code>semPlot::semPlotModel</code>. In other words,
 <code>semPlot::semPaths</code> itself does not interpret the SEM output.
@@ -372,7 +373,7 @@ The sample data, <code>pa_example_3covs</code>, is in the package
 <code>semptools</code>.</p>
 <p>This is the analysis in <code>lavaan</code>:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lavaan)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; This is lavaan 0.6-15</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; This is lavaan 0.6-16</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; lavaan is FREE software! Please report any bugs.</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>mod <span class="ot">&lt;-</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;x3 ~  x1 + x2 + cov1 + cov2 + cov3</span></span>
