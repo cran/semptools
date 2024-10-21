@@ -1,3 +1,77 @@
+# semptools 0.3.0
+
+## New Features
+
+- Added `set_edge_attribute()` to
+  change any attribute of the edges.
+  (0.2.10.2)
+
+- Added `set_node_attribute()` to
+  change any attribute of the nodes.
+  (0.2.10.3)
+
+- Added `set_edge_color()` to
+  change the colors of edges.
+  (0.2.10.2)
+
+- Added `rescale_layout()` to expand
+  the plot to fit the rectangle bounded
+  by -1 and 1 vertically and
+  horizontally. (0.2.11.1)
+
+- Added `add_rsq()` to add R-squares
+  to endogenous variables. They will
+  replace the residual variances in
+  the plot. (0.2.11.4)
+
+## Improvement
+
+- Updated `mark_sig()` to accept a
+  data frame with the *p*-values. Users
+  can supply *p*-values computed by
+  other functions. (0.2.11.3)
+
+- Updated `mark_se()` to accept a
+  data frame with the standard errors.
+  Users can supply standard errors
+  computed by other functions. (0.2.11.3)
+
+- Updated `mark_sig()` to use the *p*-values
+  from `lavaan::standardizedSolution()`.
+  Users need to explicitly request
+  standardized solution *p*-values by
+  setting the argument `std_type`.
+  (0.2.11.3)
+
+- Updated `mark_se()` to use the
+  standard errors
+  from `lavaan::standardizedSolution()`.
+  Users need to explicitly request
+  standardized solution standard errors
+  by setting the argument `std_type`.
+  (0.2.11.3)
+
+- Functions that change the attributes
+  of an edge, such as `set_edge_label_position()`,
+  should now supports factor loadings by
+  using the `=~` operator when specifying
+  the edge. Previously, we needed to specify
+  a loading as if it were a regression
+  path (e.g., `x1 ~ f1`). (0.2.11.5)
+
+## Miscellaneous
+
+- Revised `change_node_label()` to
+  address an issue with `plot.qgraph()`.
+  `label.cex` should now be used as
+  expected. (0.2.10.1)
+
+- Fixed an R CMD check issue with
+  some links in Rd files. (0.2.10.4)
+
+- Start to use Use 0.X.0 for each initial
+  submission to CRAN. (0.3.0)
+
 # semptools 0.2.10
 
 ## New Features
