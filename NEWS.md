@@ -1,3 +1,54 @@
+# semptools 0.3.2
+
+## New Features
+
+- Added quick plot functions for
+  common models: `q_simple()` for
+  simple mediation models, `q_serial()`
+  for serial mediation models, and
+  `q_parallel()` for parallel mediation
+  models. (0.3.1.3, 0.3.1.4)
+
+- Added `auto_layout_mediation()` for
+  generating a layout matrix automatically.
+  It can also update an exist plot of
+  `semPlot::semPaths()`.
+  (0.3.1.5, 0.3.1.9, 0.3.1.10)
+
+- Added `safe_edge_label_position()` to
+  reposition edge labels away from the
+  intersections between paths.
+  (0.3.1.6)
+
+- Added `safe_resid_position()` to
+  reposition the residual (or R-square)
+  of a node away from paths connected to
+  this node. (0.3.1.7)
+
+- Added `move_node()` to move a node
+  in a plot, for adjusting the layout
+  of a plot after it has been generated.
+  (0.3.1.13)
+
+## Improvement
+
+- Updated `mark_sig()` and `mark_se()`
+  to support plots of multigroup models.
+  (0.3.1.1)
+
+- Updated `add_rsq()` to support plots
+  with structural paths only.
+  (0.3.1.2)
+
+- Updated `mark_sig()` to process
+  R-squares if *p*-values are provided
+  by users. (0.3.1.8)
+
+## Miscellaneous
+
+- Update to depend on R 4.1.0 or above.
+  (0.3.1.11)
+
 # semptools 0.3.1
 
 ## Improvement
@@ -6,7 +57,7 @@
   to preliminarily support plots with
   intercepts. (0.3.0.1)
 
-- Updated `add_sig()` to support plots
+- Updated `add_rsq()` to support plots
   with intercepts. (0.3.0.2)
 
 ## Bug Fixes

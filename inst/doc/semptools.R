@@ -210,17 +210,17 @@ p_pa <- semPaths(fit_pa, whatLabels = "est",
            layout = m)
 
 ## ----eval = FALSE-------------------------------------------------------------
-#  my_position_list <- c("x4 ~ x1" = .75)
-#  my_curve_list <- c("x2 ~ x1" = -2)
-#  my_rotate_resid_list <- c(x1 = 0, x2 = 180, x3 = 140, x4 = 140)
-#  my_position_list <- c("x4 ~ x1" = .65)
-#  # If R version 4.1.0 or above
-#  p_pa3 <- p_pa |> set_curve(my_curve_list) |>
-#                    rotate_resid(my_rotate_resid_list) |>
-#                    mark_sig(fit_pa) |>
-#                    mark_se(fit_pa, sep = "\n") |>
-#                    set_edge_label_position(my_position_list)
-#  plot(p_pa3)
+# my_position_list <- c("x4 ~ x1" = .75)
+# my_curve_list <- c("x2 ~ x1" = -2)
+# my_rotate_resid_list <- c(x1 = 0, x2 = 180, x3 = 140, x4 = 140)
+# my_position_list <- c("x4 ~ x1" = .65)
+# # If R version 4.1.0 or above
+# p_pa3 <- p_pa |> set_curve(my_curve_list) |>
+#                   rotate_resid(my_rotate_resid_list) |>
+#                   mark_sig(fit_pa) |>
+#                   mark_se(fit_pa, sep = "\n") |>
+#                   set_edge_label_position(my_position_list)
+# plot(p_pa3)
 
 ## ----echo = FALSE-------------------------------------------------------------
 my_position_list <- c("x4 ~ x1" = .75)

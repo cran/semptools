@@ -125,19 +125,19 @@ p2 <- set_sem_layout(p,
 plot(p2)
 
 ## ----eval = FALSE-------------------------------------------------------------
-#  # If R version >= 4.1.0
-#  p2 <- set_sem_layout(p,
-#                      indicator_order = indicator_order,
-#                      indicator_factor = indicator_factor,
-#                      factor_layout = factor_layout,
-#                      factor_point_to = factor_point_to,
-#                      indicator_push = indicator_push,
-#                      indicator_spread = indicator_spread,
-#                      loading_position = loading_position) |>
-#                      set_curve(c("f2 ~~ f1" = -1,
-#                                  "f4 ~ f1" = 1.5)) |>
-#                      mark_sig(fit)
-#  plot(p2)
+# # If R version >= 4.1.0
+# p2 <- set_sem_layout(p,
+#                     indicator_order = indicator_order,
+#                     indicator_factor = indicator_factor,
+#                     factor_layout = factor_layout,
+#                     factor_point_to = factor_point_to,
+#                     indicator_push = indicator_push,
+#                     indicator_spread = indicator_spread,
+#                     loading_position = loading_position) |>
+#                     set_curve(c("f2 ~~ f1" = -1,
+#                                 "f4 ~ f1" = 1.5)) |>
+#                     mark_sig(fit)
+# plot(p2)
 
 ## ----echo = FALSE-------------------------------------------------------------
 # if ((compareVersion(as.character(getRversion()), "4.1.0")) >= 0) {
